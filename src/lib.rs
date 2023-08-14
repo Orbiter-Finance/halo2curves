@@ -6,6 +6,7 @@ pub mod bn256;
 pub mod grumpkin;
 pub mod pairing;
 pub mod pasta;
+pub mod pluto_eris;
 pub mod secp256k1;
 pub mod secp256r1;
 pub mod serde;
