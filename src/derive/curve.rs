@@ -181,6 +181,15 @@ macro_rules! new_curve_impl {
                 }
             }
 
+            /// Returns the point at infinity, which always has Z = 0.
+            pub fn zero()-> Self {
+                Self {
+                    x: $base::one(),
+                    y: $base::one(),
+                    z: $base::zero(),
+                }
+            }
+
             const fn curve_constant_b() -> $base {
                 $name_affine::curve_constant_b()
             }
