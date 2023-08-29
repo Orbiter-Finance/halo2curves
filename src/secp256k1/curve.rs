@@ -10,6 +10,7 @@ use group::Curve;
 use group::{prime::PrimeCurveAffine, Group as _, GroupEncoding};
 
 use rand::RngCore;
+use serde::{Deserialize, Serialize};
 use subtle::{Choice, ConditionallySelectable, ConstantTimeEq, CtOption};
 
 impl Secp256k1 {
