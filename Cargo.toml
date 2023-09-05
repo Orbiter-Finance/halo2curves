@@ -34,8 +34,8 @@ lazy_static = { version = "1.4.0"}
 num-bigint = "0.4.3"
 num-traits = "0.2"
 serde = { version = "1.0", default-features = false, features = ["derive"] }
-ec-gpu-gen = { git = "https://github.com/lanbones/ec-gpu", branch = "halo2-opt-v2", optional = true }
-ec-gpu = { git = "https://github.com/lanbones/ec-gpu", optional = true }
+ec-gpu-gen = { git = "https://github.com/Orbiter-Finance/ec-gpu.git", branch = "halo2-opt-v2", optional = true }
+ec-gpu = { git = "https://github.com/Orbiter-Finance/ec-gpu.git", optional = true }
 
 [features]
 default = []
