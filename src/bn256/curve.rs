@@ -47,6 +47,13 @@ new_curve_impl!(
     "bn256_g2",
 );
 
+#[cfg(feature = "gpu")]
+impl ec_gpu::GpuName for G1Affine {
+    fn name() -> String {
+        "Bn256_G1Affine".to_owned()
+    }
+}
+
 impl CurveAffineExt for G1Affine {
     batch_add!();
 
