@@ -255,6 +255,29 @@ impl ff::PrimeField for Fq {
     }
 }
 
+#[cfg(feature = "gpu")]
+impl ec_gpu::GpuName for Fq {
+    fn name() -> String {
+        "Bn256_Fq".to_owned()
+    }
+}
+
+#[cfg(feature = "gpu")]
+impl ec_gpu::GpuField for Fq {
+    fn one() -> Vec<u32> {
+        crate::u64_to_u32(&R.0[..])
+    }
+
+    fn r2() -> Vec<u32> {
+        crate::u64_to_u32(&R2.0[..])
+    }
+
+    fn modulus() -> Vec<u32> {
+        crate::u64_to_u32(&MODULUS.0[..])
+    }
+}
+
+
 impl SqrtRatio for Fq {
     const T_MINUS1_OVER2: [u64; 4] = [0, 0, 0, 0];
 
