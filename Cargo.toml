@@ -38,7 +38,7 @@ ec-gpu-gen = { git = "https://github.com/lanbones/ec-gpu", branch = "halo2-opt-v
 ec-gpu = { git = "https://github.com/lanbones/ec-gpu", optional = true }
 
 [features]
-default = ["gpu"]
+default = []
 asm = []
 prefetch = []
 print-trace = [ "ark-std/print-trace" ]
